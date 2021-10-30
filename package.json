@@ -1,0 +1,70 @@
+{
+  "name": "lamp",
+  "version": "0.6.0",
+  "private": true,
+  "main": "npm/lamp.js",
+  "module": "es/lamp.js",
+  "types": "es/lamp.d.ts",
+  "sideEffects": false,
+  "description": "This is a util tool lib.",
+  "repository": "git@gitlab.jiliguala.com:npm/lamp.git",
+  "author": "Amery <amery@xiangfa.org>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc && node ./bin/createMainFile.js && rollup -c",
+    "build:docs": "typedoc ./src --out ./docs --excludeExternals",
+    "lint": "eslint ./src --fix --ext .ts",
+    "test": "yarn build && mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.5.1",
+    "jsdom": "^15.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.21.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true,
+      "browser": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "es/*.js"
+        ],
+        "parserOptions": {
+          "sourceType": "module"
+        }
+      },
+      {
+        "files": [
+          "*.ts"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "extends": [
+          "plugin:@typescript-eslint/recommended"
+        ],
+        "plugins": [
+          "@typescript-eslint"
+        ],
+        "rules": {
+          "@typescript-eslint/no-explicit-any": 0
+        }
+      }
+    ]
+  }
+}

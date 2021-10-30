@@ -1,0 +1,19 @@
+.DS_Store
+
+# package managements
+node_modules
+
+# all log files
+*.log
+*.vscode
+*.cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# idea config
+.idea
+
+# docs
+docs
+build

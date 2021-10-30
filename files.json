@@ -1,0 +1,82 @@
+{
+  "Storage": {
+    "name": "Storage",
+    "path": "es/Storage.js"
+  },
+  "checkIDNumber": {
+    "name": "checkIDNumber",
+    "path": "es/checkIDNumber.js"
+  },
+  "checkWebpFeature": {
+    "name": "checkWebpFeature",
+    "path": "es/checkWebpFeature.js"
+  },
+  "compareVersion": {
+    "name": "compareVersion",
+    "path": "es/compareVersion.js"
+  },
+  "createQueryString": {
+    "name": "createQueryString",
+    "path": "es/createQueryString.js"
+  },
+  "formatAmount": {
+    "name": "formatAmount",
+    "path": "es/formatAmount.js"
+  },
+  "formatDate": {
+    "name": "formatDate",
+    "path": "es/formatDate.js"
+  },
+  "formatSize": {
+    "name": "formatSize",
+    "path": "es/formatSize.js"
+  },
+  "genRandomString": {
+    "name": "genRandomString",
+    "path": "es/genRandomString.js"
+  },
+  "getCharLength": {
+    "name": "getCharLength",
+    "path": "es/getCharLength.js"
+  },
+  "getFileExtension": {
+    "name": "getFileExtension",
+    "path": "es/getFileExtension.js"
+  },
+  "isAndroid": {
+    "name": "isAndroid",
+    "path": "es/isAndroid.js"
+  },
+  "isEmail": {
+    "name": "isEmail",
+    "path": "es/isEmail.js"
+  },
+  "isIOS": {
+    "name": "isIOS",
+    "path": "es/isIOS.js"
+  },
+  "isSupportWebp": {
+    "name": "isSupportWebp",
+    "path": "es/isSupportWebp.js"
+  },
+  "lamp": {
+    "name": "lamp",
+    "path": "es/lamp.js"
+  },
+  "padZero": {
+    "name": "padZero",
+    "path": "es/padZero.js"
+  },
+  "queryString": {
+    "name": "queryString",
+    "path": "es/queryString.js"
+  },
+  "shuffle": {
+    "name": "shuffle",
+    "path": "es/shuffle.js"
+  },
+  "uuid": {
+    "name": "uuid",
+    "path": "es/uuid.js"
+  }
+}
