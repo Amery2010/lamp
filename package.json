@@ -1,7 +1,7 @@
 {
-  "name": "lamp",
+  "name": "@meemo/lamp",
   "version": "0.6.0",
-  "private": true,
+  "private": false,
   "main": "npm/lamp.js",
   "module": "es/lamp.js",
   "types": "es/lamp.d.ts",
