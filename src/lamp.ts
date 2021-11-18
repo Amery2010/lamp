@@ -29,7 +29,7 @@ export { default as isIOS } from './isIOS'
 
 export { default as isSupportWebp } from './isSupportWebp'
 
-export const VERSION = '0.6.0'
+export const VERSION = '0.6.1'
 
 export { default as padZero } from './padZero'
 

@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const { JSDOM } = require('jsdom')
 const { window } = new JSDOM('', {
-  url: "https://www.jiliguala.com/",
+  url: "https://www.xiangfa.org/",
   contentType: "text/html",
   storageQuota: 5000000
 })
@@ -15,7 +15,7 @@ describe('测试 Storage 类', () => {
     it('当 new Storage("local") 时，应该可以成功创建对象', () => {
       new Storage('local')
       const testLocalStorage = () => {
-        if (typeof JSON.parse(window.localStorage.getItem('JLGL_local')) !== 'object') {
+        if (typeof JSON.parse(window.localStorage.getItem('Lamp_local')) !== 'object') {
           throw new Error('无法在 localStorage 上存储数据！')
         }
       }
@@ -24,7 +24,7 @@ describe('测试 Storage 类', () => {
     it('当 new Storage("session", "sessionStorage") 时，应该可以成功创建对象', () => {
       new Storage('session')
       const testSessionStorage = () => {
-        if (typeof JSON.parse(window.sessionStorage.getItem('JLGL_session')) !== 'object') {
+        if (typeof JSON.parse(window.sessionStorage.getItem('Lamp_session')) !== 'object') {
           throw new Error('无法在 localStorage 上存储数据！')
         }
       }
@@ -43,8 +43,8 @@ describe('测试 Storage 类', () => {
     it('当 new Storage("local", "sessionStorage") 时，应该能获得 type 属性为 "sessionStorage" 的对象', () => {
       expect(new Storage('local', 'sessionStorage')).to.have.property('type', 'sessionStorage')
     })
-    it('当 new Storage("local", "localStorage", "TestJLGL") 时，应该能获得 namespaces 属性为 "TestJLGL_local" 的对象', () => {
-      expect(new Storage('local', 'localStorage', 'TestJLGL')).to.have.property('namespaces', 'TestJLGL_local')
+    it('当 new Storage("local", "localStorage", "Test") 时，应该能获得 namespaces 属性为 "Test_local" 的对象', () => {
+      expect(new Storage('local', 'localStorage', 'Test')).to.have.property('namespaces', 'Test_local')
     })
   })
   describe('测试 storage 上的方法是否有效', () => {
@@ -52,20 +52,20 @@ describe('测试 Storage 类', () => {
       it('可以使用 set 方法设置数值属性', () => {
         const local = new Storage('local')
         local.set('number', 123)
-        const storage = JSON.parse(window.localStorage.getItem('JLGL_local'))
+        const storage = JSON.parse(window.localStorage.getItem('Lamp_local'))
         expect(local.store.number).to.equal(storage.number)
       })
       it('可以使用 set 方法设置属性', () => {
         const local = new Storage('local')
         local.set('text', 'text')
-        const storage = JSON.parse(window.localStorage.getItem('JLGL_local'))
+        const storage = JSON.parse(window.localStorage.getItem('Lamp_local'))
         expect(local.store.text).to.equal(storage.text)
       })
       it('可以使用 set 方法设置对象属性', () => {
         const local = new Storage('local')
         const obj = { a: 123, b: 'b', c: [1, 2, 3]}
         local.set('obj', obj)
-        const storage = JSON.parse(window.localStorage.getItem('JLGL_local'))
+        const storage = JSON.parse(window.localStorage.getItem('Lamp_local'))
         expect(local.store.obj.a).to.eql(storage.obj.a)
       })
     })
@@ -73,19 +73,19 @@ describe('测试 Storage 类', () => {
       it('可以使用 get 方法获取数值属性', () => {
         const local = new Storage('local')
         local.set('number', 123)
-        const storage = JSON.parse(window.localStorage.getItem('JLGL_local'))
+        const storage = JSON.parse(window.localStorage.getItem('Lamp_local'))
         expect(local.get('number')).to.equal(storage.number)
       })
       it('可以使用 get 方法获取文本属性', () => {
         const local = new Storage('local')
         local.set('text', 'text')
-        const storage = JSON.parse(window.localStorage.getItem('JLGL_local'))
+        const storage = JSON.parse(window.localStorage.getItem('Lamp_local'))
         expect(local.get('text')).to.equal(storage.text)
       })
       it('可以使用 get 方法获取对象属性', () => {
         const local = new Storage('local')
         local.set('obj', { a: 123, b: 'b', c: [1, 2, 3]})
-        const storage = JSON.parse(window.localStorage.getItem('JLGL_local'))
+        const storage = JSON.parse(window.localStorage.getItem('Lamp_local'))
         expect(local.get('obj')).to.eql(storage.obj)
       })
     })

@@ -20,7 +20,7 @@ var __assign = (this && this.__assign) || function () {
  * new Storage('local', 'localStorage', 'TestJLGL') // 替换默认的存储前缀
  * ```
  * @author Amery
- * @version v0.1.0
+ * @version v0.1.1
  * @since v0.1.0
  */
 var Storage = /** @class */ (function () {
@@ -28,11 +28,11 @@ var Storage = /** @class */ (function () {
      * Storage 的对象构造器
      * @param name 存储对象的名称
      * @param type 本地存储的类型，默认为 localStorage
-     * @param prefix 存储对象的名称，用于生成命名空间，默认为 JLGL
+     * @param prefix 存储对象的名称，用于生成命名空间，默认为 Lamp
      */
     function Storage(name, type, prefix) {
         if (type === void 0) { type = 'localStorage'; }
-        if (prefix === void 0) { prefix = 'JLGL'; }
+        if (prefix === void 0) { prefix = 'Lamp'; }
         this.type = type;
         // 存储对象的命名空间
         this.namespaces = prefix + "_" + name;
@@ -78,7 +78,7 @@ var Storage = /** @class */ (function () {
             }
             return JSON.parse(localstore);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     /**

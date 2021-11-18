@@ -13,7 +13,7 @@ export { default as isAndroid } from './isAndroid';
 export { default as isEmail } from './isEmail';
 export { default as isIOS } from './isIOS';
 export { default as isSupportWebp } from './isSupportWebp';
-export var VERSION = '0.6.0';
+export var VERSION = '0.6.1';
 export { default as padZero } from './padZero';
 export { default as queryString } from './queryString';
 export { default as shuffle } from './shuffle';

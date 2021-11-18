@@ -33,7 +33,7 @@ type storageType = 'localStorage' | 'sessionStorage'
  * new Storage('local', 'localStorage', 'TestJLGL') // 替换默认的存储前缀
  * ```
  * @author Amery
- * @version v0.1.0
+ * @version v0.1.1
  * @since v0.1.0
  */
 class Storage implements Storage {
@@ -42,7 +42,7 @@ class Storage implements Storage {
    */
   protected type: storageType
   /**
-   * 存储对象的命名空间，默认会添加 JLGL 前缀，
+   * 存储对象的命名空间，默认会添加 Lamp 前缀，
    * 为了避免意外覆盖其他项目所存储的同名变量
    */
   protected namespaces: string
@@ -50,12 +50,12 @@ class Storage implements Storage {
    * Storage 的对象构造器
    * @param name 存储对象的名称
    * @param type 本地存储的类型，默认为 localStorage
-   * @param prefix 存储对象的名称，用于生成命名空间，默认为 JLGL
+   * @param prefix 存储对象的名称，用于生成命名空间，默认为 Lamp
    */
   constructor (
     name: string,
     type: storageType = 'localStorage',
-    prefix = 'JLGL'
+    prefix = 'Lamp'
   ) {
     this.type = type
     // 存储对象的命名空间

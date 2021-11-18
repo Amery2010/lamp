@@ -8,7 +8,7 @@ var regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
  * @returns 返回 boolean
  * @example
  * ```
- * isEmail('abc.def@jiliguala.com') => true
+ * isEmail('abc.def@qq.com') => true
  * isEmail('abc@def') => false
  * ```
  * @author Amery
